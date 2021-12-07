@@ -1,3 +1,9 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* GENERAL */
+
 *,
 *::after,
 *::before {
@@ -13,12 +19,18 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-bg);
+  overflow: hidden;
 }
 
 .container {
-  height: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 .site-content {
@@ -29,7 +41,32 @@ body {
   flex-shrink: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
+
+/* VARIABLES */
+
+:root {
+  --color-bg: #2B2A30;
+  --color-red: #9d0000;
+  --color-green: #00aa51;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/bebasneue-book-webfont.woff2") format("woff2"),
+       url("../fonts/bebasneue-book-webfont.woff") format("woff");
+}
+
